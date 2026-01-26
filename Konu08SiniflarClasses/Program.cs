@@ -7,33 +7,29 @@ namespace Konu08SiniflarClasses
     {
         internal string sokakAdi;
         internal int kapiNo;
-
     }
     /*
-        Erişim belirteçleri 4 ana sınıfa ayrılır
-        public      : Erişim kısıtı yoktur , her yerden erişilebilir.
-        protected   : Ait olduğu sınıftan ve o sınıftan türetilen sınıflardan erişilebilir.
-        internal    : Etkin projeye ait sınıflardan erişilebilir, onların dışında erişilemez.
-        private     : Yalnız bulunduğu sınıftan erişilebilir, dıştaki sınıflardan erişilemez.
-    */
+            Erişim belirteçleri 4 ana sınıfa ayrılır
+         public     : Erişim kısıtı yoktur, her yerden erişilebilir.
+         protected  : Ait olduğu sınıftan ve o sınıftan türetilen sınıflardan erişilebilir
+         internal   : Etkin projeye ait sınıflardan erişilebilir, onların dışında erişilemez
+         private    : Yalnız bulunduğu sınıftan erişilebilir, dıştaki sınıflardan erişilemez
+     */
     public class deneme
     {
-        public string UrunAdi = "public öğeye herkess ulaşabilir";
+        public string UrunAdi = "public öğeye herkes ulaşabilir";
         protected class test
         {
             string UrunAdi;
-            
         }
     }
- 
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Konu 08 Sınıflar Classes");
-            #region Örnek1    
-            // kodları bölümlere ayırıyoruz region ile !!!
-            Ev ilkEv = new Ev(); // soyut bir yapı olan ev sınıfından ilkEv adında somut bir nesne oluşturduk.
+            Console.WriteLine("Konu08SiniflarClasses");
+            #region Örnek1
+            Ev ilkEv = new Ev(); // soyut bir yapı olan ev sınıfından ilkev adında somut bir nesne oluşturduk.
             ilkEv.sokakAdi = "Pınar sk.";
             ilkEv.kapiNo = 10;
 
@@ -42,16 +38,17 @@ namespace Konu08SiniflarClasses
 
             Console.WriteLine();
 
-            Ev yazlikEv = new(); // bu şekilde de yapabiliriz.
+            Ev yazlikEv = new();
+
             yazlikEv.sokakAdi = "Deniz sk.";
             yazlikEv.kapiNo = 18;
 
-            Console.WriteLine("yazlikEv sokakadi: " + yazlikEv.sokakAdi);
+            Console.WriteLine("yazlikEv sokakAdi: " + yazlikEv.sokakAdi);
             Console.WriteLine("yazlikEv kapiNo: " + yazlikEv.kapiNo);
 
             Console.WriteLine();
 
-            Ev koyEvi = new() // bu şekilde de yapabiliriz
+            Ev koyEvi = new()
             {
                 kapiNo = 25,
                 sokakAdi = "Maho ağa sokak."
@@ -62,20 +59,22 @@ namespace Konu08SiniflarClasses
 
             Console.WriteLine();
             #endregion
-            #region Örnek2
+
+            #region Örnek 2
             Kullanici kullanici = new()
             {
-                Adi ="Murat", 
-                Soyadi = "Yılmaz", 
-                KullaniciAdi = "murt" , 
-                Sifre ="m123" , 
+                Adi = "Murat",
+                Soyadi = "Yılmaz",
+                KullaniciAdi = "murt",
+                Sifre = "m123",
                 Id = 1
             };
 
-            Console.WriteLine("Kullancı adınız: ");
+            Console.WriteLine("Kullanıcı adınız:");
             var kullaniciAdi = Console.ReadLine();
-            Console.WriteLine("Şifreniz: ");
+            Console.WriteLine("Şifreniz:");
             var sifre = Console.ReadLine();
+
             if (kullaniciAdi == kullanici.KullaniciAdi && sifre == kullanici.Sifre)
             {
                 // sisteme giriş yap
@@ -83,8 +82,89 @@ namespace Konu08SiniflarClasses
             }
             else
             {
-                Console.WriteLine("Giriş başarısız!");
+                Console.WriteLine("Giriş Başarısız!");
             }
+            #endregion
+
+            #region Örnek 3
+
+            Araba araba = new()
+            {
+                Id = 1,
+                Marka = "Togg",
+                KasaTipi = "Suv",
+                Model = "T10x",
+                Renk = "Kırmızı",
+                ModelYili = 2025
+            };
+
+            Araba araba2 = new()
+            {
+                Id = 2,
+                Marka = "Togg",
+                KasaTipi = "Sedan",
+                Model = "T10F",
+                Renk = "Beyaz",
+                ModelYili = 2023
+            };
+            #endregion
+
+            #region Örnek 4
+            Kategori kategori = new()
+            {
+                Id = 3,
+                KategoriAdi = "Elektronik"
+            };
+            Kategori kategori2 = new()
+            {
+                Id = 4,
+                KategoriAdi = "Bilgisayar"
+            };
+            Kategori kategori3 = new()
+            {
+                Id = 5,
+                KategoriAdi = "Telefon"
+            };
+            Console.WriteLine();
+            Console.WriteLine($"Anasayfa Hakkımızda {kategori.KategoriAdi} {kategori2.KategoriAdi} {kategori3.KategoriAdi} İletişim");
+            #endregion
+
+            #region Örnek 5
+            SiniftaMetotKullanimi metotKullanimi = new(); // SiniftaMetotKullanimi classından metotKullanimi adında bir nesne oluşturduk.
+            var sonuc = metotKullanimi.LoginKontrol(kullaniciAdi, sifre); // metotKullanimi nesnesinin içindeki LoginKontrol metoduna istediği parametreleri vererek oradan dönecek bool değeri sonuc değişkenine atadık.
+            if (sonuc == true) // eğer sonuc değişkenine gelen değer true ise
+            {
+                Console.WriteLine("Giriş Başarılı!");
+                Console.WriteLine("Hoşgeldin Admin");
+            }
+            else // sonuc değişken değeri false ise
+                Console.WriteLine("Giriş Başarısız!");
+
+            Console.WriteLine();
+
+            var toplamasonucu = metotKullanimi.ToplamaYap(10, 8);
+            Console.WriteLine("toplama sonucu : " + toplamasonucu);
+
+            Console.WriteLine();
+
+            Console.WriteLine("Statik değişken: " + SiniftaMetotKullanimi.StatikDegisken); // StatikDegisken in değerine ulaşmak için direk sınıfadı.StatikDegisken adı şeklinde ulaşıyoruz
+            Console.WriteLine("Dinamik değişken: " + metotKullanimi.DinamikDegisken);
+            #endregion
+
+            #region Örnek 6
+            User user = new()
+            {
+                Id = 1,
+                CreateDate = DateTime.Now,
+                Name = "Test",
+                Email = "Test@deneme.co",
+                Password = sifre,
+                Phone = "Test",
+                Username = kullaniciAdi
+            };
+            Console.WriteLine();
+            bool kullaniciGirisSonuc = user.KullaniciGiris(user.Username, user.Password);
+            Console.WriteLine("kullanici Giris Sonuc: " + kullaniciGirisSonuc);
             #endregion
         }
     }
