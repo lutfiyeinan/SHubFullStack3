@@ -13,4 +13,6 @@
   <Project Path="Konu12KalitimInheritance/Konu12KalitimInheritance.csproj" Id="34c367da-4786-4e99-a5f8-5ebdfc84f7c9" />
   <Project Path="Konu13KapsullemeEncapsulation/Konu13KapsullemeEncapsulation.csproj" Id="8e593094-eacd-4494-bc5c-1466e3c5d5eb" />
   <Project Path="Konu14InterfacesArayuzler/Konu14InterfacesArayuzler.csproj" Id="07ce4223-7780-4758-b52e-373b4651b63d" />
+  <Project Path="Konu15AbstractClasses/Konu15AbstractClasses.csproj" Id="e58a2233-6e89-41e6-85cb-031b440ba6b9" />
+  <Project Path="Konu16CollectionsKoleksiyonlar/Konu16CollectionsKoleksiyonlar.csproj" Id="47604299-e41b-4aba-a703-085e190740d2" />
 </Solution>
