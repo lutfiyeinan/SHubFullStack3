@@ -174,7 +174,7 @@ namespace Konu16CollectionsKoleksiyonlar
             {
                 new User
                 {
-                    Id =1,
+                    Id =3,
                     Name = "Pusat",
                     Email = "pusat",
                     Password = "gmr12"

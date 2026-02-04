@@ -15,4 +15,7 @@
   <Project Path="Konu14InterfacesArayuzler/Konu14InterfacesArayuzler.csproj" Id="07ce4223-7780-4758-b52e-373b4651b63d" />
   <Project Path="Konu15AbstractClasses/Konu15AbstractClasses.csproj" Id="e58a2233-6e89-41e6-85cb-031b440ba6b9" />
   <Project Path="Konu16CollectionsKoleksiyonlar/Konu16CollectionsKoleksiyonlar.csproj" Id="47604299-e41b-4aba-a703-085e190740d2" />
+  <Project Path="Konu17HataYonetimi/Konu17HataYonetimi.csproj" Id="459638da-478f-463d-9a4d-8004e719f6bc" />
+  <Project Path="Konu18SOLIDPrensipleri/Konu18SOLIDPrensipleri.csproj" Id="c19cc060-1383-421d-a0e5-6ab6a94f7f2e" />
+  <Project Path="WindowsFormsEgitimi/WindowsFormsEgitimi.csproj" Id="e58ab5e2-17de-4f3b-bbd6-71461a2a7d30" />
 </Solution>
