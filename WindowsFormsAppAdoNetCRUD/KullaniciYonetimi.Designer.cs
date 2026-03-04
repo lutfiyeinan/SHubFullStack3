@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsAppAdoNetCRUD
 {
-    partial class UrunYonetimi
+    partial class KullaniciYonetimi
     {
         /// <summary>
         /// Required designer variable.
@@ -28,56 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvUrunler = new System.Windows.Forms.DataGridView();
+            this.dgvKullanicilar = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
-            this.txtAciklama = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtStok = new System.Windows.Forms.TextBox();
-            this.txtUrunFiyati = new System.Windows.Forms.TextBox();
             this.cbDurum = new System.Windows.Forms.CheckBox();
-            this.txtUrunAdi = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtAdi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).BeginInit();
+            this.txtSoyadi = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSifre = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvUrunler
+            // dgvKullanicilar
             // 
-            this.dgvUrunler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUrunler.Location = new System.Drawing.Point(12, 21);
-            this.dgvUrunler.Name = "dgvUrunler";
-            this.dgvUrunler.Size = new System.Drawing.Size(776, 223);
-            this.dgvUrunler.TabIndex = 1;
-            this.dgvUrunler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUrunler_CellClick);
+            this.dgvKullanicilar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvKullanicilar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKullanicilar.Location = new System.Drawing.Point(12, 12);
+            this.dgvKullanicilar.Name = "dgvKullanicilar";
+            this.dgvKullanicilar.Size = new System.Drawing.Size(776, 223);
+            this.dgvKullanicilar.TabIndex = 1;
+            this.dgvKullanicilar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKullanicilar_CellClick);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnSil);
             this.groupBox1.Controls.Add(this.btnGuncelle);
             this.groupBox1.Controls.Add(this.btnEkle);
-            this.groupBox1.Controls.Add(this.txtAciklama);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtStok);
-            this.groupBox1.Controls.Add(this.txtUrunFiyati);
-            this.groupBox1.Controls.Add(this.cbDurum);
-            this.groupBox1.Controls.Add(this.txtUrunAdi);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.cbDurum);
+            this.groupBox1.Controls.Add(this.txtSifre);
+            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.txtSoyadi);
+            this.groupBox1.Controls.Add(this.txtAdi);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 259);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(664, 179);
+            this.groupBox1.Size = new System.Drawing.Size(523, 179);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Ürün Bilgileri";
+            this.groupBox1.Text = "Kullanıcı Bilgileri";
             // 
             // btnSil
             // 
@@ -111,73 +111,31 @@
             this.btnEkle.UseVisualStyleBackColor = true;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // txtAciklama
-            // 
-            this.txtAciklama.Location = new System.Drawing.Point(500, 74);
-            this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(158, 96);
-            this.txtAciklama.TabIndex = 5;
-            this.txtAciklama.Text = "";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(444, 77);
+            this.label3.Location = new System.Drawing.Point(179, 26);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Açıklama";
-            // 
-            // txtStok
-            // 
-            this.txtStok.Location = new System.Drawing.Point(321, 52);
-            this.txtStok.Name = "txtStok";
-            this.txtStok.Size = new System.Drawing.Size(100, 20);
-            this.txtStok.TabIndex = 2;
-            // 
-            // txtUrunFiyati
-            // 
-            this.txtUrunFiyati.Location = new System.Drawing.Point(321, 23);
-            this.txtUrunFiyati.Name = "txtUrunFiyati";
-            this.txtUrunFiyati.Size = new System.Drawing.Size(100, 20);
-            this.txtUrunFiyati.TabIndex = 2;
+            this.label3.Text = "Soyadı";
             // 
             // cbDurum
             // 
             this.cbDurum.AutoSize = true;
-            this.cbDurum.Location = new System.Drawing.Point(124, 54);
+            this.cbDurum.Location = new System.Drawing.Point(60, 54);
             this.cbDurum.Name = "cbDurum";
             this.cbDurum.Size = new System.Drawing.Size(47, 17);
             this.cbDurum.TabIndex = 3;
             this.cbDurum.Text = "Aktif";
             this.cbDurum.UseVisualStyleBackColor = true;
             // 
-            // txtUrunAdi
+            // txtAdi
             // 
-            this.txtUrunAdi.Location = new System.Drawing.Point(124, 23);
-            this.txtUrunAdi.Name = "txtUrunAdi";
-            this.txtUrunAdi.Size = new System.Drawing.Size(100, 20);
-            this.txtUrunAdi.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(258, 54);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Stok";
-            this.label5.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(258, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Ürün Fiyatı";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.txtAdi.Location = new System.Drawing.Point(60, 23);
+            this.txtAdi.Name = "txtAdi";
+            this.txtAdi.Size = new System.Drawing.Size(100, 20);
+            this.txtAdi.TabIndex = 2;
             // 
             // label2
             // 
@@ -193,22 +151,61 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.Size = new System.Drawing.Size(22, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Ürün Adı";
+            this.label1.Text = "Adı";
             // 
-            // UrunYonetimi
+            // txtSoyadi
+            // 
+            this.txtSoyadi.Location = new System.Drawing.Point(224, 23);
+            this.txtSoyadi.Name = "txtSoyadi";
+            this.txtSoyadi.Size = new System.Drawing.Size(100, 20);
+            this.txtSoyadi.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(179, 54);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(28, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Şifre";
+            // 
+            // txtSifre
+            // 
+            this.txtSifre.Location = new System.Drawing.Point(224, 55);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(100, 20);
+            this.txtSifre.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(330, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Email";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(375, 23);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.TabIndex = 2;
+            // 
+            // KullaniciYonetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dgvUrunler);
-            this.Name = "UrunYonetimi";
+            this.Controls.Add(this.dgvKullanicilar);
+            this.Name = "KullaniciYonetimi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ürün Yönetimi";
-            this.Load += new System.EventHandler(this.UrunYonetimi_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).EndInit();
+            this.Text = "Kullanici Yönetimi";
+            this.Load += new System.EventHandler(this.KullaniciYonetimi_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -217,20 +214,20 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvUrunler;
+        private System.Windows.Forms.DataGridView dgvKullanicilar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnEkle;
-        private System.Windows.Forms.RichTextBox txtAciklama;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox cbDurum;
-        private System.Windows.Forms.TextBox txtUrunAdi;
+        private System.Windows.Forms.TextBox txtAdi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtUrunFiyati;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtStok;
+        private System.Windows.Forms.TextBox txtSifre;
+        private System.Windows.Forms.TextBox txtSoyadi;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }
